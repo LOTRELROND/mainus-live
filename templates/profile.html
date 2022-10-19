@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="usertable" style="display: flex;   margin-top: 35px; justify-content: space-between;">
+  <div class="userinfo" style="margin-left: 100px; margin-top: 20px;" >
+    <h3>{{post.user.fullname}}({{post.user.points}})</h3>
+    <p style="font-size:1rem;">{{post.user.bio}}</p>
+  </div>
+  <img src="{{post.user.profile_pic.url}}" alt="resim" style="width: 100px; margin-right: 40px; border-radius: 100px;" >
+</div>
+<div class="entries">
+  {% for entry in post %}
+  {% if value %}
+  
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+{% endblock %}

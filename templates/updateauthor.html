@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<form method="post">
+
+    {% csrf_token %}
+
+    {{form|crispy}}
+    <br>
+    <button type="submit" class="btn btn-danger">Ekle</button>
+
+</form>
+
+{% endblock %}

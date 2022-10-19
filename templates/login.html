@@ -1,0 +1,6 @@
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+<a href="{% url 'users:password_reset' %}">şifremi unuttum</a>

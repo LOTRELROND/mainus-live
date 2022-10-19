@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+{% for post in posts %}
+
+
+{% for post in posts %}
+<div class="arg" style="display: inline-block; position: relative;">
+    <div class="image" style="float: left; margin-top: 30px;">
+      <img src="{{post.user.profile_pic.url}}" alt="resim" width="50px" height="50px">
+    </div>
+    <div class="card" style="margin-top: 30px; margin-left: 5px; height: 260px; width: 1050px;">
+        <div class="card-header">
+        {{post.title | title}}
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">{{post.date}}</h5>
+        <p class="card-text" style="
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        ">{{post.content | safe}}</p>
+        </div>
+        <div class="card-footer justify-content-between" style="display: flex; " >
+          <a href="http://127.0.0.1:8000/event/detail/{{post.slug}}" class="btn btn-danger">Tartışmaya Katıl</a>
+          <a href="http://127.0.0.1:8000/event/delete/{{post.slug}}" class="btn btn-danger">Sil</a>
+          <a href="http://127.0.0.1:8000/event/edit/{{post.slug}}" class="btn btn-danger">Düzenle</a>
+          <div class="comment">
+            
+            <span>Last Reply: {{post.last_reply.date}}</span>
+            <span>~ Yorum Sayısı: {{post.num_comments}}</span>
+          </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endfor %}
+
+{% endblock content %}
+
+
