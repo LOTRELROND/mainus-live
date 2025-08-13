@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-86pq34t5%(dc2oy-4kimcbc2$%p&mbb@&_fbmfsisl=y_9^6h5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djangoforum-backend.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -160,3 +160,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'host@gmail.com'  
 EMAIL_HOST_PASSWORD = 'host-password'  
 EMAIL_PORT = 587
+
